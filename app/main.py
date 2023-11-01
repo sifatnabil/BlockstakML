@@ -2,13 +2,11 @@ import uvicorn
 from fastapi import FastAPI
 
 app = FastAPI(
-    title="Financial Analyzer APIs",
+    title="BlockstakML API",
     docs_url="/api/docs",
     redoc_url="/api/redoc",
     openapi_url="/api/openapi.json"
 )
-
-# app.include_router(transactions.router, prefix="/api")
 
 @app.get("/")
 async def root():
