@@ -1,5 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
+from routers import long_term_deposit
 
 app = FastAPI(
     title="BlockstakML API",
@@ -7,6 +8,9 @@ app = FastAPI(
     redoc_url="/api/redoc",
     openapi_url="/api/openapi.json"
 )
+
+app.include_router(long_term_deposit.router, prefix="/api/v1/long_term_deposit")
+
 
 @app.get("/")
 async def root():
