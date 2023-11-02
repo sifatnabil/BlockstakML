@@ -17,7 +17,4 @@ class Telemarketing(BaseModel):
     pdays: int | None = None
     previous: int | None = None
     poutcome: str | None = None
-
-    def __dict__(self):
-        pass
     
